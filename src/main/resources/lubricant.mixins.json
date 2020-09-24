@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "site.neworld.lubricant.mixin",
+  "compatibilityLevel": "JAVA_11",
+  "mixins": [
+    "MixinTypeFilterableList"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

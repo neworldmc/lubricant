@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "observer",
+  "version": "${version}",
+
+  "name": "Observer",
+  "description": "This mod is part of the NWMC minecraft microservices project. Offers a variety of optimizations. Crafted with heart by the NEWorldMC Team",
+  "authors": [
+    "DWVoid", "Sunbread233"
+  ],
+  "contact": {
+    "homepage": "https://www.newinfinideas.cn",
+    "sources": "N/A"
+  },
+
+  "license": "N/A",
+  "icon": "assets/lubricant/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "site.neworld.lubricant.Initializer"
+    ]
+  },
+  "mixins": [
+    "lubricant.mixins.json"
+  ],
+
+  "depends": {
+    "fabric-language-kotlin": "1.4.0",
+    "fabricloader": ">=0.7.4",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
