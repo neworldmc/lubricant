@@ -24,18 +24,19 @@ class TypeFilterableList<T : Any>(private val elementType: Class<T>) : AbstractC
         // prepare the insert
         stack.reverse()
         val father = classMap[klass]!!
+        val required = stack.size
         val start = father.self
+        val end = start + required
         // add in the missing slots after its parent node
         entityMap.addAll(start + 1, stack.map { HashSet<T>() })
         // make space for the new class id
-        val required = stack.size
         for ((_, v) in classMap) v.apply {
             if (self > start) self += required
             if (right > start) right += required
         }
         // execute the class insert
         var baseId = start
-        for (v in stack) classMap[v] = ClassHierarchyNode(++baseId, father.right)
+        for (v in stack) classMap[v] = ClassHierarchyNode(++baseId, end)
         return baseId
     }
 

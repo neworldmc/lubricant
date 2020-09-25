@@ -4,6 +4,7 @@
   "package": "site.neworld.lubricant.mixin",
   "compatibilityLevel": "JAVA_11",
   "mixins": [
+    "MixinWorldChunk",
     "MixinTypeFilterableList"
   ],
   "injectors": {

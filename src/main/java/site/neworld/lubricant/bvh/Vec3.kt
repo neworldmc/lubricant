@@ -30,3 +30,7 @@ data class Vec3(val x: Float, val y: Float, val z: Float) {
 fun minVec(l: Vec3, r: Vec3) = Vec3(min(l.x, r.x), min(l.y, r.y), min(l.z, r.z))
 
 fun maxVec(l: Vec3, r: Vec3) = Vec3(max(l.x, r.x), max(l.y, r.y), max(l.z, r.z))
+
+fun distance(l: Vec3, r: Vec3) = (l - r).length()
+
+fun distanceSquared(l: Vec3, r: Vec3) = (l - r).lengthSquared()
